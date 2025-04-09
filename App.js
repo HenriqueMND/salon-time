@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from "react-native";
+import InputLoginSenha from "./components/InputLoginSenha";
+import BotaoEntrar from "./components/BotaoEntrar";
+import BotaoEsqueceuSenha from "./components/BotaoEsqueceuSenha";
+import BotaoCadastrar from "./components/BotaoCadastrar";
 
-export default function App() {
+const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <InputLoginSenha />
+      <BotaoEntrar />
+      <BotaoEsqueceuSenha />
+      <BotaoCadastrar />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 10,
+    backgroundColor: "#f621eb"
   },
 });
+
+export default App;
